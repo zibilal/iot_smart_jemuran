@@ -1,7 +1,7 @@
 
 #include "datetime_lib.h"
 
-String getId(NTPClient timeClient) {
+String getCurrentDateTime(NTPClient timeClient) {
 
   unsigned long epochTime = timeClient.getEpochTime();
   time_t atime = (time_t)epochTime;
@@ -25,7 +25,7 @@ String getId(NTPClient timeClient) {
   return adate;
 }
 
-String getCurrentDateTime(NTPClient timeClient) {
+String getId(NTPClient timeClient) {
 
   unsigned long epochTime = timeClient.getEpochTime();
   time_t atime = (time_t)epochTime;
@@ -44,9 +44,9 @@ String getCurrentDateTime(NTPClient timeClient) {
   sprintf(month_txt, "%d", month(atime));
   sprintf(year_txt, "%d", year(atime));
 
-  String separator1 = "-";
+  String separator1 = "/";
   String separator2 = ":";
-  String separator3 = " ";
+  String separator3 = "/";
 
   String adate = String(year_txt) + separator1 + String(month_txt) + separator1 + String(day_txt) + separator3 + String(hour_txt) + separator2 + String(minute_txt) + separator2 + String(second_txt);
   return adate;

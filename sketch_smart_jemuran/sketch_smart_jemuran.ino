@@ -33,7 +33,7 @@ int pinAnalogHujan;
 char ssid[] = SECRET_SSID;
 char pass[] = SECRET_PASS;
 
-const char *firebaseBasePath = "/smart-jemuran-test";
+const char *firebaseBasePath = "/smart-jemuran-test-2";
 
 // Koneksi data ke Firebase database
 FirebaseData firebaseData;
